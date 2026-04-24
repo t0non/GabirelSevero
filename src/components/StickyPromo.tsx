@@ -16,7 +16,7 @@ export const StickyPromo: FC = () => {
     }, []);
 
     return (
-        <div className="fixed bottom-4 right-0 z-50 md:hidden pointer-events-none flex flex-col items-end gap-3">
+        <div className="fixed bottom-24 right-2 z-50 md:hidden pointer-events-none flex flex-col items-end gap-3">
             <AnimatePresence mode="wait">
                 {showBanner ? (
                     <motion.div 
@@ -24,7 +24,7 @@ export const StickyPromo: FC = () => {
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ scale: 0.5, opacity: 0 }}
-                        className="bg-[#4ebecd] text-white p-4 rounded-2xl shadow-2xl flex items-center justify-between gap-4 pointer-events-auto w-[calc(100vw-1rem)] border border-white/20 mb-20"
+                        className="bg-[#4ebecd] text-white p-4 rounded-2xl shadow-2xl flex items-center justify-between gap-4 pointer-events-auto w-[calc(100vw-2rem)] border border-white/20 mb-2"
                     >
                         <div className="flex items-center gap-3">
                             <div className="bg-white/20 p-2 rounded-lg">
@@ -54,7 +54,7 @@ export const StickyPromo: FC = () => {
                         animate={{ scale: 1, opacity: 1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setShowBanner(true)}
-                        className="bg-[#4ebecd] text-white p-4 rounded-full shadow-2xl pointer-events-auto border-4 border-white flex items-center justify-center relative mb-20"
+                        className="bg-[#4ebecd] text-white p-4 rounded-full shadow-2xl pointer-events-auto border-4 border-white flex items-center justify-center relative mb-2"
                     >
                         <Tag size={24} className="text-white" />
                         <motion.div 

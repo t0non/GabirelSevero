@@ -143,17 +143,17 @@ export const ProductPage: FC = () => {
 
             <div className="space-y-1 bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
               <div className="flex items-end gap-3 mb-2">
-                 <span className="text-4xl font-bold text-primary font-heading tracking-tighter">
-                   R$ {product.price.toFixed(2)}
+                 <span className={`text-4xl font-black font-heading tracking-tighter ${product.originalPrice ? 'text-[#22C55E]' : 'text-primary'}`}>
+                   R$ {product.price.toFixed(2).replace('.', ',')}
                  </span>
                  {product.originalPrice && (
-                   <span className="text-lg text-text-light line-through mb-1 opacity-50">
-                     R$ {product.originalPrice.toFixed(2)}
+                   <span className="text-lg text-gray-400 line-through mb-1 font-light">
+                     R$ {product.originalPrice.toFixed(2).replace('.', ',')}
                    </span>
                  )}
               </div>
               <div className="flex items-center gap-2 text-[11px] font-bold text-secondary uppercase tracking-widest">
-                 <Package size={14} /> Em 3x de R$ {(product.price / 3).toFixed(2)} sem juros
+                 <Package size={14} /> Em 3x de R$ {(product.price / 3).toFixed(2).replace('.', ',')} sem juros
               </div>
             </div>
 

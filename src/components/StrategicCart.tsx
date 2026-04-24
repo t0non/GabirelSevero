@@ -14,7 +14,9 @@ export const StrategicCart: FC = () => {
   const progress = Math.min(100, (total / 80) * 100);
 
   // Suggestions for Upsell (products not in cart)
-  const suggestions = BEST_SELLERS.filter(p => !items.find(item => item.id === p.id)).slice(0, 2);
+  const suggestions = BEST_SELLERS
+    .filter(p => !items.find(item => item.id === p.id))
+    .slice(0, 4);
 
   return (
     <AnimatePresence>
@@ -111,26 +113,33 @@ export const StrategicCart: FC = () => {
               )}
 
               {/* Upsell Section */}
-              {items.length > 0 && suggestions.length > 0 && (
-                <div className="pt-8 border-t border-gray-100">
+              {items.length > 0 && (
+                <div className="pt-8 border-t border-gray-100 pb-4">
                   <p className="text-xs font-bold text-text-dark uppercase tracking-widest mb-4 flex items-center gap-2">
                     <Sparkles size={14} className="text-primary" /> Clientes também compraram:
                   </p>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {suggestions.map((product) => (
-                      <div key={product.id} className="flex items-center gap-4 bg-white p-3 rounded-2xl border border-gray-100 group shadow-sm">
-                        <img src={product.image} alt={product.name} className="h-14 w-14 rounded-lg object-cover" referrerPolicy="no-referrer" />
+                      <motion.div 
+                        key={product.id} 
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex items-center gap-4 bg-white p-3 rounded-2xl border border-gray-100 group shadow-sm hover:border-primary/30 transition-colors"
+                      >
+                        <div className="h-14 w-14 rounded-xl overflow-hidden bg-gray-50 flex-shrink-0">
+                          <img src={product.image} alt={product.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                        </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs font-bold text-text-dark truncate">{product.name}</p>
-                          <p className="text-xs font-bold text-primary">R$ {product.price.toFixed(2)}</p>
+                          <p className="text-xs font-bold text-text-dark leading-tight line-clamp-1">{product.name}</p>
+                          <p className="text-xs font-bold text-primary mt-1">R$ {product.price.toFixed(2).replace('.', ',')}</p>
                         </div>
                         <button 
                           onClick={() => addItem(product)}
-                          className="bg-white hover:bg-primary hover:text-white text-primary text-[10px] font-bold px-3 py-1.5 rounded-full border border-primary transition-all active:scale-95"
+                          className="bg-white hover:bg-primary hover:text-white text-primary text-[10px] font-black px-4 py-2 rounded-full border-2 border-primary transition-all active:scale-95 uppercase"
                         >
-                          Adicionar
+                          Mais
                         </button>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>

@@ -74,7 +74,12 @@ export const ProductCard: FC<Props> = ({ product }) => {
         )}
         
         <div className="mt-auto flex flex-col items-center gap-0.5">
-          <span className="text-sm md:text-2xl font-medium text-text-dark font-sans tracking-tight">
+          {product.originalPrice && (
+            <span className="text-[10px] md:text-sm text-gray-400 line-through font-light">
+              R$ {product.originalPrice.toFixed(2).replace('.', ',')}
+            </span>
+          )}
+          <span className={`text-sm md:text-2xl font-black font-sans tracking-tight ${product.originalPrice ? 'text-[#22C55E]' : 'text-text-dark'}`}>
             R$ {product.price.toFixed(2).replace('.', ',')}
           </span>
         </div>

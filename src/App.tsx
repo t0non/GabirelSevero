@@ -53,7 +53,7 @@ const HomePage: FC = () => {
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 40,
+            duration: 120,
             repeat: Infinity,
             ease: "linear",
           }}

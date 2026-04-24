@@ -17,7 +17,7 @@ export const CartWidget: FC = () => {
       exit={{ scale: 0, opacity: 0 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-4 right-0 z-[60] group md:bottom-20 md:right-8"
+      className="fixed bottom-4 right-2 z-[60] group md:bottom-20 md:right-8"
     >
       <button
         onClick={toggleCart}
