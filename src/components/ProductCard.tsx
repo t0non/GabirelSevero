@@ -73,13 +73,13 @@ export const ProductCard: FC<Props> = ({ product }) => {
           </div>
         )}
         
-        <div className="mt-auto flex flex-col items-center gap-0.5">
+        <div className="mt-auto flex flex-col items-center text-center gap-0.5 w-full">
           {product.originalPrice && (
-            <span className="text-[10px] md:text-sm text-gray-400 line-through font-light">
+            <span className="text-[10px] md:text-xs text-gray-400 line-through font-light w-full">
               R$ {product.originalPrice.toFixed(2).replace('.', ',')}
             </span>
           )}
-          <span className={`text-sm md:text-2xl font-black font-sans tracking-tight ${product.originalPrice ? 'text-[#22C55E]' : 'text-text-dark'}`}>
+          <span className={`text-sm md:text-xl font-black font-sans tracking-tight w-full ${product.originalPrice ? 'text-[#22C55E]' : 'text-text-dark'}`}>
             R$ {product.price.toFixed(2).replace('.', ',')}
           </span>
         </div>
