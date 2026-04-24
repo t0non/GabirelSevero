@@ -29,6 +29,8 @@ export const ProductCard: FC<Props> = ({ product }) => {
           alt={product.name}
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
+          loading="lazy"
+          decoding="async"
         />
         
         {/* Floating Badges */}

@@ -33,6 +33,8 @@ export const CategoryList: FC = () => {
                     alt={cat.name}
                     className="w-full h-full object-cover rounded-full"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <span className="mt-3 font-heading font-semibold text-text-dark group-hover:text-primary transition-colors text-[10px] sm:text-base text-center">

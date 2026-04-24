@@ -37,6 +37,8 @@ export const Navbar: FC = () => {
                 alt="Festa na Caixa" 
                 className="h-8 md:h-12 w-auto object-contain" 
                 referrerPolicy="no-referrer"
+                loading="eager"
+                decoding="async"
               />
             </Link>
           </div>

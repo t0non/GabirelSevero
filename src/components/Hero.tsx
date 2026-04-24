@@ -17,6 +17,9 @@ export const Hero: FC = () => {
             alt="Banner Promocional"
             className="w-full min-h-[300px] md:min-h-0 h-auto object-cover object-center"
             referrerPolicy="no-referrer"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
           />
         </picture>
       </Link>

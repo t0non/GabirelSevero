@@ -80,6 +80,9 @@ export const ProductPage: FC = () => {
                   alt={product.name} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   referrerPolicy="no-referrer"
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="sync"
                 />
                 <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
                    <Clock size={14} className="text-primary" />
@@ -94,6 +97,8 @@ export const ProductPage: FC = () => {
                         alt="Thumbnail" 
                         className="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity" 
                         referrerPolicy="no-referrer"
+                        loading="lazy"
+                        decoding="async"
                       />
                    </div>
                 ))}
@@ -236,11 +241,11 @@ export const ProductPage: FC = () => {
                     <div className="flex items-center justify-between gap-4 md:gap-6 py-2 md:py-4">
                         <div className="flex items-center -space-x-3 md:-space-x-4">
                             <div className="relative z-20">
-                              <img src={product.image} className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl object-cover border-4 border-white shadow-xl rotate-[-6deg]" referrerPolicy="no-referrer" />
+                              <img src={product.image} className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl object-cover border-4 border-white shadow-xl rotate-[-6deg]" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                             </div>
                             <div className="relative z-10">
                               <Plus className="absolute -top-3 left-1/2 -translate-x-1/2 text-secondary bg-white rounded-full shadow-md z-30" size={20} />
-                              <img src={bundleProduct.image} className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl object-cover border-4 border-white shadow-xl rotate-[6deg]" referrerPolicy="no-referrer" />
+                              <img src={bundleProduct.image} className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl object-cover border-4 border-white shadow-xl rotate-[6deg]" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                             </div>
                         </div>
                         <div className="text-right">

@@ -51,12 +51,12 @@ export const AboutUs: FC = () => {
             className="order-1 lg:order-2 grid grid-cols-2 gap-4"
           >
              <div className="space-y-4 text-center">
-                <img src="https://files.catbox.moe/cuvoj2.jpg" alt="Artesanato" className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[4/5]" referrerPolicy="no-referrer" />
-                <img src="https://files.catbox.moe/4d6fpg.jpg" alt="Artesanato" className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[4/3]" referrerPolicy="no-referrer" />
+                <img src="https://files.catbox.moe/cuvoj2.jpg" alt="Artesanato" className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[4/5]" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
+                <img src="https://files.catbox.moe/4d6fpg.jpg" alt="Artesanato" className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[4/3]" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
              </div>
              <div className="space-y-4 pt-12 text-center">
-                <img src="https://files.catbox.moe/kf2bph.png" alt="Artesanato" className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[4/3]" referrerPolicy="no-referrer" />
-                <img src="https://files.catbox.moe/u31as7.jpg" alt="Artesanato" className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[4/5]" referrerPolicy="no-referrer" />
+                <img src="https://files.catbox.moe/kf2bph.png" alt="Artesanato" className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[4/3]" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
+                <img src="https://files.catbox.moe/u31as7.jpg" alt="Artesanato" className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[4/5]" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
              </div>
           </motion.div>
         </div>

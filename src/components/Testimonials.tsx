@@ -82,6 +82,8 @@ export const Testimonials: FC = () => {
                 alt={`Depoimento ${idx + 1}`} 
                 className="w-full h-full object-cover px-1"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

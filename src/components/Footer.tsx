@@ -15,6 +15,8 @@ export const Footer: FC = () => {
                 alt="Festa na Caixa" 
                 className="h-16 w-auto object-contain" 
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </Link>
             <p className="text-text-light text-lg max-w-sm leading-relaxed">
@@ -81,9 +83,9 @@ export const Footer: FC = () => {
           </div>
           
           <div className="flex items-center gap-8 bg-white px-8 py-4 rounded-3xl border border-gray-100 shadow-sm">
-            <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="Visa" className="h-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" />
-            <img src="https://cdn-icons-png.flaticon.com/128/349/349228.png" alt="Mastercard" className="h-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" />
-            <img src="https://cdn-icons-png.flaticon.com/128/196/196024.png" alt="Pix" className="h-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" />
+            <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="Visa" className="h-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" loading="lazy" decoding="async" />
+            <img src="https://cdn-icons-png.flaticon.com/128/349/349228.png" alt="Mastercard" className="h-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" loading="lazy" decoding="async" />
+            <img src="https://cdn-icons-png.flaticon.com/128/196/196024.png" alt="Pix" className="h-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
